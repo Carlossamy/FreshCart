@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: font-poppins;
+}
+
+body {
+  background-image: url(./assets/light-patten-DfaqEfwF.svg);
+}
+
+.active-button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.active-button.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 3px !important;
+  background-color: blue;
+}
+
+::-webkit-scrollbar {
+  width: 10px; 
+}
+  
+::-webkit-scrollbar-track {
+  background: #e0f7fa;
+  border-radius: 50px;
+}
+  
+::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 50px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+  background: #0056b3;
+}
+
+
+*:not(input):not(textarea) {  /*! To Ensure Pevent the Caret Sign (|) to show when click on any part in the page */
+  caret-color: transparent !important;
+}
+  
+input, textarea {
+  caret-color: auto !important;
+}
