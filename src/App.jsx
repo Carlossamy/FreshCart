@@ -141,10 +141,10 @@ function App() {
       <AuthContextProvider>
         <QueryClientProvider client={reactQueryConfig}>
           <CartContextProvider>
-            {/*  <Provider> */}
+            {/* //!  <Provider store={reduxStore}> */}
             <RouterProvider router={router} />
             <Toaster />
-            {/* </Provider> */}
+            {/*//! </Provider> */}
           </CartContextProvider>
         </QueryClientProvider>
       </AuthContextProvider>
