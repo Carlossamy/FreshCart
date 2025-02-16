@@ -1,3 +1,5 @@
+//! import { Provider } from "react-redux";
+
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
@@ -139,8 +141,10 @@ function App() {
       <AuthContextProvider>
         <QueryClientProvider client={reactQueryConfig}>
           <CartContextProvider>
+            {/*  <Provider> */}
             <RouterProvider router={router} />
             <Toaster />
+            {/* </Provider> */}
           </CartContextProvider>
         </QueryClientProvider>
       </AuthContextProvider>

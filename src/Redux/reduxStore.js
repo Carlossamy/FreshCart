@@ -1,13 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from "./counterSlice";
 
-const store = configureStore({
+const reduxStore = configureStore({
   reducer: {
     counter: counterReducer
   }
 });
 
-export default store;
+export default reduxStore;
 
 // import { useSelector, useDispatch } from "react-redux";
 // import { increment, decrement } from "./counterSlice";
