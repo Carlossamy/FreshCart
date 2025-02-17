@@ -3,11 +3,16 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function ContactUs() {
-  const formik = useFormik({
+  const contactUsFormik = useFormik({
     initialValues: { name: "", email: "", message: "" },
     onSubmit: (values) => {
-      alert("Message sent successfully!");
-      formik.resetForm();
+      alert(
+        `Message sent successfully! 
+        ${values.name} 
+        Your email is${values.email}
+        Your message is ${values.message}`
+      );
+      contactUsFormik.resetForm();
       console.log(values);
     }
   });
@@ -49,13 +54,13 @@ export default function ContactUs() {
             </div>
           </div>
 
-          <form onSubmit={formik.handleSubmit} className="space-y-4">
+          <form onSubmit={contactUsFormik.handleSubmit} className="space-y-4">
             <input
               type="text"
               name="name"
               placeholder="* Your Name"
-              value={formik.values.name}
-              onChange={formik.handleChange}
+              value={contactUsFormik.values.name}
+              onChange={contactUsFormik.handleChange}
               className="w-full text-md p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100"
               required
             />
@@ -63,16 +68,16 @@ export default function ContactUs() {
               type="email"
               name="email"
               placeholder="* Your Email"
-              value={formik.values.email}
-              onChange={formik.handleChange}
+              value={contactUsFormik.values.email}
+              onChange={contactUsFormik.handleChange}
               className="w-full text-md p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100"
               required
             />
             <textarea
               name="message"
               placeholder="* Your Message"
-              value={formik.values.message}
-              onChange={formik.handleChange}
+              value={contactUsFormik.values.message}
+              onChange={contactUsFormik.handleChange}
               className="w-full text-md p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100 resize-none"
               rows="4"
               required></textarea>
