@@ -8,7 +8,7 @@ export default function ContactUs() {
     onSubmit: (values) => {
       alert(
         `Message sent successfully! 
-        ${values.name} 
+        ${values.name}
         Your email is ${values.email}
         Your message is ${values.message}`
       );
