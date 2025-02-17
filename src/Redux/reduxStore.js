@@ -13,7 +13,7 @@ export default reduxStore;
 // import { increment, decrement } from "./counterSlice";
 
 // const CounterComponent = () => {
-//   const count = useSelector((state) => state.counter.count);
+//   const { count } = useSelector((store) => store.counter);
 //   const dispatch = useDispatch();
 
 //   return (
