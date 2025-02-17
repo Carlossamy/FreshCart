@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import axios from "axios";
 import { ColorRing, FallingLines } from "react-loader-spinner";
 import { useQuery } from "react-query";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import toast from "react-hot-toast";
 import { cartContext } from "../../Context/CartContextProvider";
 
@@ -12,6 +12,8 @@ export default function Products() {
   const [isClicked, setIsClicked] = useState(false);
 
   const [activeButton, setActiveButton] = useState(null);
+
+  const { id } = useParams();
 
   const { addProductCart, productsCart } = useContext(cartContext);
 
@@ -74,7 +76,7 @@ export default function Products() {
   }
 
   const { isError, isLoading, data, error } = useQuery({
-    queryKey: ["allProducts"],
+    queryKey: ["allProducts", id],
     queryFn: getAllProducts
   });
 

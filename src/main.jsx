@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 // import { Provider } from "react-redux";
-// import store from "./Redux/reduxStore.js";
+// import reduxStore from "./Redux/reduxStore.js";
 
 //! These are the links that should be injected into the component, to use with it within the component!
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -15,7 +15,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   //* ReactDOM is responsible for rendering React components into the DOM.
   //* StrictMode is a tool for highlighting potential problems in an application.
   <StrictMode>
-    {/* <Provider store={store}> */}
+    {/* <Provider store={reduxStore}> */}
     <App />
     {/* </Provider> */}
   </StrictMode>
