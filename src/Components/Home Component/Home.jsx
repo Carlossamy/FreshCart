@@ -134,7 +134,7 @@ export default function Products() {
 
   useEffect(() => {
     const toastTimer = setTimeout(() => {
-      toast("Welcome back! Browse & Buy", {
+      toast("Welcome! Browse & Buy", {
         duration: 3000, //! the time that the toast will be shown!
         position: "top-center",
         icon: "🛒",
@@ -145,7 +145,7 @@ export default function Products() {
           letterSpacing: "2px"
         }
       });
-    }, 2000); //! Delay after loading the Products Component!
+    }, 3000); //! Delay after loading the Products Component!
 
     return () => clearTimeout(toastTimer);
   }, []);
