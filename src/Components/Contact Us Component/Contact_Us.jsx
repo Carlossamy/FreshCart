@@ -9,7 +9,7 @@ export default function ContactUs() {
       alert(
         `Message sent successfully! 
         ${values.name} 
-        Your email is${values.email}
+        Your email is ${values.email}
         Your message is ${values.message}`
       );
       contactUsFormik.resetForm();
