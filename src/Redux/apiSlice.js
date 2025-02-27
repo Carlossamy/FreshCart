@@ -10,7 +10,9 @@ const getAllProducts = createAsyncThunk(
 );
 
 const getAllBrands = createAsyncThunk("eCommerce/getAllBrands", function () {
-  return fetch("https://ecommerce.routemisr.com/api/v1/brands");
+  return fetch("https://ecommerce.routemisr.com/api/v1/brands").then((res) =>
+    res.json()
+  );
 });
 
 export const forkifySlice = createSlice({
