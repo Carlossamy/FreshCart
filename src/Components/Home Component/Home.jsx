@@ -145,7 +145,7 @@ export default function Products() {
           letterSpacing: "2px"
         }
       });
-    }, 3000); //! Delay after loading the Products Component!
+    }, 3500); //! Delay after loading the Products Component!
 
     return () => clearTimeout(toastTimer);
   }, []);
