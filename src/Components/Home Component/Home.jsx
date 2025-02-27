@@ -150,7 +150,7 @@ export default function Products() {
     return () => clearTimeout(toastTimer);
   }, []);
 
-  // console.log(data?.data?.data);
+  //! console.log(data?.data?.data);
 
   if (isError) {
     return (
