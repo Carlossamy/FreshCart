@@ -10,7 +10,6 @@ export default function ProtectedRoute({ children }) {
     if (savedToken) {
       setToken(savedToken);
     } else {
-      alert("Please Login to access this page");
       return <Navigate to="/login" />;
     }
   }
